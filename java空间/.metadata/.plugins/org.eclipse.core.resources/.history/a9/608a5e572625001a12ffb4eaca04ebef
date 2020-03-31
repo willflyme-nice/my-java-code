@@ -1,0 +1,126 @@
+package snakeparts;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import jdk.internal.dynalink.beans.StaticClass;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+/**
+ * 贪吃蛇类
+ */
+public class Snake {
+	private List<Block> snakeBody = new ArrayList<Block>(); //代表蛇身,第0个元素代表蛇头
+	private Direction direction;  //蛇的前进方向 
+	
+	//初始化3格长的蛇,并向右前进
+	void Init() {
+		Collections.addAll(snakeBody, new Block(0,2), new Block(0,1), new Block(0,0));
+		right();
+	}
+	
+	//蛇前进一格
+	void step() {
+		for(int i=1; i<snakeBody.size(); i++) {
+			snakeBody.get(i).setValue(snakeBody.get(i-1)); //后一个格子移动到前一个格子的位置
+		}
+		switch (direction) {
+		case UP:
+			snakeBody.get(0).up();
+			break;
+		case DOWN:
+			snakeBody.get(0).down();
+		case LEFT:
+			snakeBody.get(0).left();
+			break;
+		case RIGHT:
+			snakeBody.get(0).right();	
+		}	
+	}
+	//蛇向上转
+	void up() {
+		if(direction != Direction.DOWN) { direction = Direction.UP; }	
+	}
+	//蛇向下转
+	void down() { 
+		if(direction != Direction.UP) { direction = Direction.DOWN; }	
+	}
+	//蛇向左转
+	void left() { 
+		if(direction != Direction.RIGHT) { direction = Direction.LEFT;}
+	}
+	//蛇向右转
+	void right() {
+		if(direction != Direction.LEFT) { direction = Direction.RIGHT;}
+	}
+	//蛇伸长一格
+	void grow() {
+		
+	}
+	
+	public static void main(String[] ags) {
+		Snake snake = new Snake();
+		snake.Init();
+		System.out.println(snake.snakeBody);
+		snake.step();
+		System.out.println(snake.snakeBody);
+		snake.step();
+		System.out.println(snake.snakeBody);
+		snake.step();
+		System.out.println(snake.snakeBody);
+	}	
+}
+
+enum Direction{
+	UP,
+	DOWN,
+	LEFT,
+	RIGHT
+}
+
+//格子类
+class Block{
+	public static final int ROWS = 20; //总行数 20行
+	public static final int COLS = 20; //总列数 20列
+	private int row;
+	private int col;
+	public Block(int row, int col){
+		this.row = row % ROWS;
+		this.col = col % COLS;
+	}
+	public int getRow() {
+		return row;
+	}
+	public int getCol() {
+		return col;
+	}
+	public String toString() {
+		return "("+row+","+col+")";
+	}
+	//将另外格子的值赋值于当前格子
+	public void setValue(Block b) {
+		this.row = b.getRow();
+		this.col = b.getCol();
+	}
+	//格子朝上移
+	public void up() {
+		row = (row + ROWS - 1) % ROWS;
+	}
+	//格子朝下移
+	public void down() {
+		row = (row + 1) % ROWS;
+	}
+	//格子朝左移
+	public void left() {
+		col = (col + COLS - 1) % COLS;
+	}
+	//格子朝右移
+	public void right() {
+		col = (col + 1) % COLS;
+	}
+}
+
+
+

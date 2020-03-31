@@ -1,0 +1,12 @@
+import java.io.File;
+public class Usefile{
+	public static void main(String args[]) {
+		File f=new File("/´óÑ§¿Î¼þ");
+		System.out.println("The file's obsolute path is--"+f.getAbsolutePath());
+		System.out.println("The file is exist--"+f.list());
+		
+		
+		
+	}
+	
+}

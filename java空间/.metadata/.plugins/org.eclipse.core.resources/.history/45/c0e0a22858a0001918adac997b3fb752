@@ -1,0 +1,20 @@
+import java.util.Map;
+
+
+public class StaticDemo{
+	private static Map<String,String[]> map;
+	
+	
+	
+	
+	public static void main(String[] arg) throws Exception {
+		map.put("海南",new String[]{"三亚","海口","琼海","万宁"});
+		String[] strArray=map.get("海南");
+		for(int i=0;i<strArray.length;i++)
+		{
+			System.out.println(strArray[i]);
+		}
+	}
+	
+	
+}

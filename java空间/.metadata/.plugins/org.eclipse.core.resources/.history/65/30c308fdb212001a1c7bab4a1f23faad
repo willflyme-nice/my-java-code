@@ -1,0 +1,177 @@
+package com.example.MyTools;
+
+import java.awt.BasicStroke;
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.Graphics2D;
+import java.awt.GridLayout;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+import java.awt.event.MouseMotionListener;
+import java.util.Random;
+
+import javax.swing.BorderFactory;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.border.LineBorder;
+
+import com.example.drawparts.BrashPanel;
+import com.example.drawparts.ColorPanel;
+
+public class DrawFrame extends JFrame{
+	
+	private final int frameWidth = 700;
+	private final int frameHeight = 500;
+	
+	private DrawPanel drawPanel = new DrawPanel();
+	private ToolBar toolBar = new ToolBar();
+	
+	public DrawFrame() {
+		setSize(frameWidth,frameHeight);
+		setLocation(430,50);
+		setTitle("绘画板");
+		setResizable(false);
+		setLayout(new BorderLayout());
+		add(drawPanel); //加入绘图区
+		add(toolBar,"North");   //加入工具栏
+		((JPanel)getContentPane()).setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+	}
+	
+}
+
+//绘图区
+class DrawPanel extends JPanel implements MouseMotionListener,MouseListener{
+
+	private int x1;
+	private int y1;
+	private int x2;
+	private int y2;
+	private Graphics2D g2d;
+	static int brash = 5;   //笔宽
+	static Color color = Color.black;  //颜色
+	
+	public DrawPanel() {
+		setBackground(Color.white);
+		addMouseMotionListener(this);
+		addMouseListener(this);
+		setBorder(BorderFactory.createEtchedBorder(color.black, color.gray));
+	}
+
+	@Override
+	public void mouseDragged(MouseEvent e) {
+		g2d = (Graphics2D)DrawPanel.this.getGraphics();
+		x2 = e.getX();
+		y2 = e.getY();
+		g2d.setColor(color);
+		g2d.setStroke(new BasicStroke(brash));
+		g2d.drawLine(x1, y1, x2, y2);
+		x1 = x2;
+		y1 = y2;
+	}
+
+	@Override
+	public void mousePressed(MouseEvent e) {
+		g2d = (Graphics2D)DrawPanel.this.getGraphics();
+		x1 = e.getX();
+		y1 = e.getY();
+		g2d.setColor(color);
+		g2d.fillArc(x1-brash/2, y1-brash/2, brash, brash, 0, 360);
+	}
+	
+	public void mouseMoved(MouseEvent e) {}
+	public void mouseClicked(MouseEvent e) {}
+	public void mouseReleased(MouseEvent e) {}
+	public void mouseEntered(MouseEvent e) {}
+	public void mouseExited(MouseEvent e) {}
+		
+}
+
+//工具区
+class ToolBar extends JPanel{
+	
+	private ColorPanel colorPanel ;  //颜料板
+	private BrashPanel brashPanel;   //笔刷板
+	
+	
+//	private SelectColor selectColor = new SelectColor(); //监听器1
+//	private SelectBrash selectBrash = new SelectBrash(); //监听器2
+	
+	public ToolBar() {
+		colorPanel = new ColorPanel();
+		setLayout(new FlowLayout(FlowLayout.RIGHT, 20, 5));
+		colorPanel.addTo(this);
+	}
+	
+	//颜料面板初始化
+	/*private JPanel colorsInit() {
+		Random random = new Random();
+		int r,g,b;
+		
+//		colorPanel.setSize(122,50);
+		
+			
+			color.addMouseListener(selectColor);  //设置监听
+		}
+		return colorPanel;
+	}*/
+	
+	//线宽工具组初始化
+	/*private JPanel brashInit() {
+		JPanel brashPanel = new JPanel(new GridLayout(5,1,2,5));
+		for(int i=1; i<brashs.length; i++) {
+			JLabel brash = new JLabel(" ");
+			brash.setPreferredSize(new Dimension(100,i));
+			brash.setBackground(Color.black);
+			brash.setOpaque(true);
+		
+			brashPanel.add(brash);
+			
+			brash.addMouseListener(selectBrash);  //设置监听
+		}
+		return brashPanel;
+	}*/
+	
+	//监听器类1
+	class SelectColor implements MouseListener{
+			
+			public void mouseClicked(MouseEvent e) {
+				JLabel src = (JLabel)e.getSource();
+				DrawPanel.color = src.getBackground();
+			}
+			
+			public void mouseReleased(MouseEvent e) {}
+			public void mousePressed(MouseEvent e) {}
+			public void mouseExited(MouseEvent e) {}
+			public void mouseEntered(MouseEvent e) {}
+	
+	}
+
+	//监听器类2
+		class SelectBrash implements MouseListener{
+				
+				public void mouseClicked(MouseEvent e) {
+					JLabel src = (JLabel)e.getSource();
+					DrawPanel.brash = src.getHeight();
+				}
+				
+				public void mouseReleased(MouseEvent e) {}
+				public void mousePressed(MouseEvent e) {}
+				public void mouseExited(MouseEvent e) {}
+				public void mouseEntered(MouseEvent e) {}
+		
+		}
+	
+	
+}
+
+
+
+
+
+
+
+
+

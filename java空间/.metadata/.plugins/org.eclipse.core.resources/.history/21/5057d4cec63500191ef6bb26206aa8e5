@@ -1,0 +1,12 @@
+import java.io.*;
+public class FileDemo{
+	public static void main(String args[]) throws IOException{
+		FileInputStream fi=new FileInputStream("FileDemo.java");
+		BufferedInputStream bf=new BufferedInputStream(fi);
+		byte i=bf.read();
+		System.out.print(i+" ");
+		
+		
+	}
+	
+}

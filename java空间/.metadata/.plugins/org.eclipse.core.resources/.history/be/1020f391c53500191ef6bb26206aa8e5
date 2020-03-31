@@ -1,0 +1,17 @@
+import java.io.*;
+public class FileDemo{
+	public static void main(String args[]) {
+		String s;
+		InputStreamReader ir;
+		BufferedReader in;
+		ir=new InputStreamReader(System.in);
+		in=new BufferedReader(ir);
+		while((s=in.readLine())!=null)
+			System.out.println("Read:"+s);
+		
+		
+		
+		
+	}
+	
+}

@@ -1,0 +1,78 @@
+import java.lang.Thread;
+
+   
+public class ThreadTest{
+	
+	Stack st=new Stack();
+	MyThread one=new MyThread();
+	 MyThread two=new MyThread();
+	 MyThread three=new MyThread();
+	
+	public static void main(String[]ad) {
+      
+		ThreadTest that=new ThreadTest();
+		that.go();
+	}
+	
+	void go() {
+		one.start();
+		two.start();
+		three.start();
+		try {
+			Thread.sleep(1000);
+		}catch(InterruptedException e) {} 
+		
+		st.get();
+	}
+	
+	class MyThread extends Thread{
+		public void run() {
+			st.push('a');
+			st.push('b');
+			st.push('c');
+			st.push('d');
+		}
+	}
+
+	
+}
+
+
+
+
+class Stack{
+	int idx=0;
+	char ch[]=new char[10];
+	public void push(char c) {
+		ch[idx]=c;
+		idx++;
+	}
+	
+	public char pop() {
+		idx--;
+		return ch[idx];
+	}
+	
+	public void get() {
+		int i;
+		for(i=0;i<10;i++) {
+			System.out.println("ch["+i+"]="+ch[i]);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

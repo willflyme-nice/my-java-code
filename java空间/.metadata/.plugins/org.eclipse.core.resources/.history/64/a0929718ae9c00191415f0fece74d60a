@@ -1,0 +1,16 @@
+/**
+ * 
+ * @author Administrator
+ *
+ */
+public class Debut{
+	//主类
+	public static void main(String arg[]) {//主函数
+		System.out.println("output first line"); //系统调用
+		System.out.println("output 2 line");
+		System.out.println("output 3 line");
+		System.out.println("output 4 line");
+		System.out.println("output 5 line");
+	}
+	
+}

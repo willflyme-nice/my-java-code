@@ -1,0 +1,26 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class MyDrawing{
+	static public void main(String[]arg) {
+		MyFrame frame=new MyFrame(" ±÷”—› æ");
+		
+		frame.setSize(250,250);
+		frame.setLocation(300, 200);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+}
+
+class MyFrame extends JFrame{
+	MyFrame(String name){
+		super(name);
+	}
+	public void paintComponent(Graphics g) {
+		Font font=new Font("Œ¢»Ì—≈∫⁄",Font.PLAIN,15);
+		g.drawString("√Î’Î ±÷”",100,200);
+		
+		
+	}
+}

@@ -1,0 +1,13 @@
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+public class FormatDate {
+	public static void main(String[]arg) {
+		Date date=new Date();
+	    DateFormat format=DateFormat.getDateInstance(DateFormat.FULL,Locale.CHINA);
+	    String dateStr=format.format(date);
+	    System.out.println(dateStr);
+    }
+}
+	

@@ -1,0 +1,83 @@
+import java.lang.Thread;
+
+   
+public class ThreadTest{
+	
+	Stack st=new Stack();
+	MyThread one=new MyThread();
+	 MyThread two=new MyThread();
+	 MyThread three=new MyThread();
+	
+	public static void main(String[]ad) {
+      
+		ThreadTest that=new ThreadTest();
+		that.go();
+	}
+	
+	void go() {
+		
+			one.start();
+		    two.start();
+		    three.start();
+		
+		try {
+			one.join();
+		
+		}catch(InterruptedException e) {} 
+		
+		st.get();
+	}
+	
+	class MyThread extends Thread{
+		public void run() {
+			try{st.push('a');
+			    st.push('b');
+			    st.push('c');
+			    st.push('d');
+			}catch(ArrayIndexOutOfBoundsException e) 
+			{System.out.println("out of bounds error...."+Thread.currentThread().toString());}
+		}
+	}
+
+	
+}
+
+
+
+
+class Stack{
+	int idx=0;
+	char ch[]=new char[10];
+	public void push(char c) {
+		ch[idx]=c;
+		idx++;
+	}
+	
+	public char pop() {
+		idx--;
+		return ch[idx];
+	}
+	
+	public void get() {
+		int i;
+		for(i=0;i<10;i++) {
+			System.out.println("ch["+i+"]="+ch[i]);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

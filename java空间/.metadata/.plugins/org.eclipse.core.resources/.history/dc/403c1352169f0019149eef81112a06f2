@@ -1,0 +1,48 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class ChouJiang{
+	
+	//窗体中包含的组件
+	JFrame frame;
+	JTextField tf;
+	JTextArea ta1,ta2;
+	JButton button1,button2;
+	
+	public static void main(String arg[]) throws Exception{
+		ChouJiang that=new ChouJiang();
+		that.go();
+	}
+	public void go() throws Exception{
+		
+		//创建并布局
+		frame  =new JFrame("用随机数抽取幸运观众");
+		tf=new JTextField(10);
+		ta1=new JTextArea(10,20);
+		ta2=new JTextArea(10,25);
+		button1=new JButton("抽奖");
+		button2=new JButton("退出");
+		Box box1=Box.createVerticalBox();
+		Box box2=Box.createVerticalBox();
+		box1.add(tf);
+		box1.add(ta1);
+		box2.add(new JLabel());
+		box2.add(new JLabel());
+		box2.add(new JLabel());
+		box2.add(button1);
+		box2.add(button2);
+		Container cp=frame.getContentPane();
+		cp.add(box1,"West");
+		cp.add(ta2);
+		cp.add(box2,"East");
+		
+		//显示窗口
+		frame.pack();
+		//frame.setBounds(200,200,300,500);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+	}
+}

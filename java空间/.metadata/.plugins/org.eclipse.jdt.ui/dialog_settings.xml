@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="JavaSE-1.8" key="org.eclipse.jdt.ui.last.selected.execution.enviroment"/>
+	<item value="true" key="Replace"/>
+	<item value="3" key="TypeHierarchyViewPart.orientation"/>
+	<item value="2" key="CallHierarchyViewPart.field_mode"/>
+	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
+	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="500" key="CallHierarchyViewPart.ratio1"/>
+	<item value="false" key="delegateUpdating"/>
+	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
+	<item value="500" key="CallHierarchyViewPart.ratio3"/>
+	<item value="jre1.8.0_221" key="org.eclipse.jdt.ui.last.selected.project.jre"/>
+	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
+	<item value="0" key="CallHierarchyViewPart.call_mode"/>
+	<item value="S:\java空间\jar包" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="false" key="InstanceOf"/>
+	<item value="3" key="CallHierarchyViewPart.orientation"/>
+	<item value="0" key="org.eclipse.jdt.ui.last.selected.jre.kind2"/>
+	<item value="480,578" key="UserLibraryLoadSaveDialog.size"/>
+	<list key="SearchScopeActionGroup.working_set">
+	</list>
+	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
+		<item value="2" key="layout"/>
+		<item value="true" key="group_libraries"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;packageExplorer group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;Aggregate for window 1562988182895&quot;&gt;&#x0D;&#x0A;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;&gt;&#x0D;&#x0A;&lt;xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.buildfolder&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.m2e.MavenModuleFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.buildship.ui.packageexplorer.filter.gradle.subProject&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.DeprecatedMembersFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/&gt;&#x0D;&#x0A;&lt;/xmlDefinedFilters&gt;&#x0D;&#x0A;&lt;/customFilters&gt;&#x0D;&#x0A;&lt;/packageExplorer&gt;" key="memento"/>
+		<item value="1" key="rootMode"/>
+		<item value="false" key="linkWithEditor"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.text.QuickOutline">
+		<item value="true" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_SIZE"/>
+		<item value="400" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_WIDTH"/>
+		<item value="360" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_HEIGHT"/>
+		<item value="false" key="GoIntoTopLevelTypeAction.isChecked"/>
+		<item value="false" key="org.eclipse.jdt.internal.ui.text.JavaOutlineInformationControlDIALOG_USE_PERSISTED_LOCATION"/>
+	</section>
+	<section name="javadoc">
+		<item value="public" key="access"/>
+		<item value="false" key="noindex"/>
+		<item value="E:\软件学习\程序代码\java工作空间\Exercise3\javadoc.xml" key="antpath"/>
+		<item value="false" key="nodeprecatedlist"/>
+		<item value="true" key="use"/>
+		<item value="true" key="author"/>
+		<item value="false" key="nodeprecated"/>
+		<item value="false" key="nonavbar"/>
+		<item value="" key="docletpath"/>
+		<item value="D:\Program Files\Java\jdk1.8.0_221\bin\javadoc.exe;D:\Program Files\Java\jdk1.8.0_201\bin\javadoc.exe" key="javadoc_command_history"/>
+		<item value="1.8" key="source"/>
+		<item value="true" key="version"/>
+		<item value="" key="docletname"/>
+		<item value="true" key="splitindex"/>
+		<item value="true" key="fromStandard"/>
+		<item value="false" key="notree"/>
+		<item value="C:\Users\Administrator\Desktop\helpDoc" key="destdir"/>
+		<item value="false" key="openinbrowser"/>
+		<section name="projects">
+			<section name="Demo">
+				<item value="E:\软件学习\程序代码\java工作空间\Demo\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\Demo\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="120">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\120\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\120\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="110">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\110\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\110\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="111">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\111\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\111\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="112">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\112\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\112\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="113">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\113\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\113\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="114">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\114\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\114\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="115">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\115\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\115\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="105">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\105\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\105\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="116">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\116\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\116\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="106">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\106\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\106\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="117">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\117\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\117\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="107">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\107\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\107\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="118">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\118\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\118\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="108">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\108\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\108\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="119">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\119\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\119\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Exercise3">
+				<item value="E:\软件学习\程序代码\java工作空间\Exercise3\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\Administrator\Desktop\helpDoc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="109">
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\109\javadoc.xml" key="antpath"/>
+				<item value="E:\软件学习\程序代码\java工作空间\MR\04\109\doc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+			<section name="Exercise2">
+				<item value="E:\软件学习\程序代码\java工作空间\Exercise3\javadoc.xml" key="antpath"/>
+				<item value="C:\Users\Administrator\Desktop\helpDoc" key="destdir"/>
+				<item value="" key="href"/>
+			</section>
+		</section>
+	</section>
+	<section name="OverrideMethodDialog">
+		<item value="true" key="showtypes"/>
+	</section>
+	<section name="RenameInformationPopup">
+	</section>
+	<section name="completion_proposal_size">
+		<item value="275" key="size.y"/>
+		<item value="565" key="size.x"/>
+	</section>
+	<section name="AddGetterSetterDialog">
+		<item value="false" key="SortOrdering"/>
+		<item value="false" key="RemoveFinal"/>
+	</section>
+	<section name="JarPackageWizard">
+		<item value="false" key="JarPackageWizardPage.INCLUDE_DIRECTORY_ENTRIES"/>
+		<item value="" key="JarManifestWizardPage.MANIFEST_LOCATION"/>
+		<item value="false" key="JarManifestWizardPage.SEAL_JAR"/>
+		<item value="true" key="JarPackageWizardPage.COMPRESS"/>
+		<item value="false" key="JarManifestWizardPage.REUSE_MANIFEST"/>
+		<item value="false" key="jarOptionsWizardPage.STORE_USE_SRC_FOLDERS"/>
+		<item value="true" key="jarOptionsWizardPage.EXPORT_WARNINGS"/>
+		<item value="" key="jarOptionsWizardPage.DESCRIPTION_LOCATION"/>
+		<item value="true" key="jarOptionsWizardPage.BUILD_IF_NEEDED"/>
+		<item value="false" key="JarPackageWizardPage.EXPORT_JAVA_FILES"/>
+		<item value="true" key="jarOptionsWizardPage.EXPORT_ERRORS"/>
+		<item value="true" key="JarManifestWizardPage.GENERATE_MANIFEST"/>
+		<item value="true" key="JarPackageWizardPage.EXPORT_CLASS_FILES"/>
+		<item value="false" key="JarPackageWizardPage.OVERWRITE"/>
+		<item value="false" key="jarOptionsWizardPage.SAVE_DESCRIPTION"/>
+		<item value="false" key="JarPackageWizardPage.REFACTORINGS"/>
+		<item value="false" key="JarManifestWizardPage.SAVE_MANIFEST"/>
+		<item value="false" key="JarPackageWizardPage.EXPORT_OUTPUT_FOLDER"/>
+		<list key="JarPackageWizardPage.DESTINATION_NAMES_ID">
+			<item value="C:\Users\Administrator\Desktop\my-tools.jar"/>
+			<item value="C:\Users\Administrator\Desktop\my-tools-package.jar"/>
+			<item value="C:\Users\Administrator\Desktop\my-tool-package.jar"/>
+			<item value="C:\Users\Administrator\Desktop\myjar.jar"/>
+			<item value="C:\Users\Administrator\Desktop\com\myjar.jar"/>
+		</list>
+	</section>
+	<section name="JavaElementSearchActions">
+	</section>
+	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="false" key="renameSubpackages"/>
+		<item value="false" key="updateQualifiedNames"/>
+		<item value="*" key="patterns"/>
+		<item value="false" key="updateSimilarElements"/>
+		<item value="1" key="updateSimilarElementsMatchStrategy"/>
+		<item value="false" key="updateTextualMatches"/>
+	</section>
+	<section name="DialogBounds_SuperInterfaceSelectionDialog">
+		<item value="373" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="597" key="DIALOG_HEIGHT"/>
+		<item value="105" key="DIALOG_X_ORIGIN"/>
+		<item value="-121" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="SearchInDialog">
+		<item value="true" key="SearchInProjects"/>
+		<item value="true" key="SearchInAppLibs"/>
+		<item value="true" key="SearchInJRE"/>
+		<item value="true" key="SearchInSources"/>
+	</section>
+	<section name="ExtractMethodWizard">
+		<item value="true" key="GenerateJavadoc"/>
+		<item value="1" key="AccessModifier"/>
+		<item value="false" key="ThrowRuntimeExceptions"/>
+	</section>
+	<section name="NewClassWizardPage">
+		<item value="false" key="create_constructor"/>
+		<item value="true" key="create_unimplemented"/>
+	</section>
+	<section name="OptionalMessageDialog.hide.">
+		<item value="true" key="org.eclipse.jdt.ui.typecomment.deprecated"/>
+	</section>
+	<section name="NewAnnotationWizardPage">
+		<item value="false" key="add_documented"/>
+		<section name="AddTarget">
+			<item value="false" key="enabled"/>
+			<list key="selectedEnums">
+			</list>
+		</section>
+		<section name="AddRetention">
+			<item value="false" key="enabled"/>
+			<list key="selectedEnums">
+				<item value="CLASS"/>
+			</list>
+		</section>
+	</section>
+	<section name="DialogBounds_OverrideMethodDialog">
+		<item value="582" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="519" key="DIALOG_HEIGHT"/>
+		<item value="545" key="DIALOG_X_ORIGIN"/>
+		<item value="323" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.dialogs.OpenTypeSelectionDialog2">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History/&gt;" key="History"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="397" key="DIALOG_X_ORIGIN"/>
+			<item value="126" key="DIALOG_Y_ORIGIN"/>
+		</section>
+	</section>
+	<section name="DialogBounds_GetterSetterTreeSelectionDialog">
+		<item value="587" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="767" key="DIALOG_HEIGHT"/>
+		<item value="401" key="DIALOG_X_ORIGIN"/>
+		<item value="-62" key="DIALOG_Y_ORIGIN"/>
+	</section>
+	<section name="CallHierarchySearchScope">
+	</section>
+	<section name="RefactoringWizard.preview">
+		<item value="600" key="width"/>
+		<item value="400" key="height"/>
+	</section>
+	<section name="SourceActionDialog.methods">
+		<item value="false" key="SynchronizedModifier"/>
+		<item value="false" key="Comments"/>
+		<item value="1" key="VisibilityModifier"/>
+		<item value="false" key="FinalModifier"/>
+	</section>
+	<section name="ClasspathContainerSelectionPage">
+		<item value="0" key="index"/>
+	</section>
+	<section name="quick_assist_proposal_size">
+	</section>
+	<section name="NewPackageWizardPage">
+		<item value="false" key="create_package_info_java"/>
+	</section>
+	<section name="JavaSearchPage">
+		<item value="0" key="HISTORY_SIZE"/>
+		<item value="false" key="CASE_SENSITIVE"/>
+		<item value="11" key="INCLUDE_MASK"/>
+	</section>
+	<section name="BuildPathsPropertyPage">
+		<item value="2" key="pageIndex"/>
+	</section>
+</section>

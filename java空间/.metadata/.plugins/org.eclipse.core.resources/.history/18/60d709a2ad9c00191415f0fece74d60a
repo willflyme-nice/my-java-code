@@ -1,0 +1,10 @@
+public class Debut{
+	public static void main(String arg[]) {
+		System.out.println("output first line");
+		System.out.println("output 2 line");
+		System.out.println("output 3 line");
+		System.out.println("output 4 line");
+		System.out.println("output 5 line");
+	}
+	
+}

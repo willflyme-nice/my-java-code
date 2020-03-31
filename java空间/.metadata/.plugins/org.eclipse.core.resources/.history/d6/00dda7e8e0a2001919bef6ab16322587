@@ -1,0 +1,37 @@
+/**
+ * 
+ * 数字类演示
+ * 
+ * @author Administrator
+ *
+ */
+import java.text.DecimalFormat;
+import java.lang.StringBuffer;
+
+public class NumTest {
+	private final static String NUM[]= {"零","壹","贰","叁","肆","伍","陆","柒","捌","玖"};
+	private final static String UNIT[]= { "", "拾", "佰", "仟", "万", "拾","佰", "仟", "亿", "拾", "佰", "仟" };
+	public static void main(String arg[]) {
+		//创建一个数字格式类型
+		DecimalFormat df1=new DecimalFormat("##0.###");
+		double i=111111000;
+		String str=df1.format(i);
+		System.out.println(str);
+		
+		str=new StringBuffer(str).reverse().toString();
+		System.out.println(str);
+		
+		StringBuffer num=new StringBuffer();
+		for(int count=0;count<str.length();count++) {
+			num.append(UNIT[count]);
+			num.append(NUM[str.charAt(count)-'0']);
+		}
+		
+		str=num.toString();
+		System.out.println(str);
+		
+		str=new StringBuffer(str).reverse().toString();
+		System.out.println(str);
+		
+	}
+}

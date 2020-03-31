@@ -1,0 +1,19 @@
+import java.awt.*;
+import javax.swing.*;
+public class Usefile{
+	public static void main(String args[]) {
+		JFrame frame=new JFrame("Hellow");
+		JButton button=new JButton("Press me");
+		frame.getContentPane().add(button,BorderLayout.CENTER);
+		frame.pack();
+		frame.setBounds(100,100,300,200);
+		
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		 
+		
+		
+		
+	}
+	
+}

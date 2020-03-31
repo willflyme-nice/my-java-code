@@ -1,0 +1,50 @@
+import java.awt.*;
+import javax.swing.event.*;
+import javax.swing.*;
+
+public class ListDemo {
+	JFrame frame=new JFrame("ListDemo");
+	JList<String> list;
+	JScrollPane jsp;
+	JPanel panel;
+	JButton button;
+	JTextField tf;
+	
+	public static void main(String args[]) throws Exception{
+		
+		ListDemo that=new ListDemo ();that.go();
+				
+	}
+	
+	public void go() throws Exception{
+		
+		DefaultListModel<String> listmodel=new DefaultListModel<String>();
+		listmodel.addElement("one");
+		listmodel.addElement("two");
+		listmodel.addElement("three");
+		listmodel.addElement("four");
+		list=new JList<String>(listmodel);
+		jsp=new JScrollPane(list,JScrollPane.
+				VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		tf=new JTextField(15);
+		button=new JButton("add new item");
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				listmodel.addElement(tf.getText());
+			}
+			
+		});
+		panel=new JPanel();
+		panel.add(tf);
+		panel.add(button);
+		Container content=frame.getContentPane();
+		content.add(jsp);
+		content.add(panel, "South");
+		
+		frame.setBounds(200,100,800,600);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		}
+		
+}

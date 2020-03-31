@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XML.Schema" elementFormDefault="qualified">
+	<xs:element name="booking-system">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="book-info"/>
+				<xs:element ref="reader-info"/>
+				<xs:element ref="lend-info"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="book-info" >
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="book" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="book">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="titil"/>
+				<xs:element name="type"/>
+				<xs:element name="author"/>
+				<xs:element name="publisher"/>
+				<xs:element name="pub-date"/>
+				<xs:element name="price"/>
+				<xs:element name="store"/>
+			</xs:sequence>
+			<xs:attribute name="book-id" type="xs:ID" use="required"/>		
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="reader-info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="reader" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="reader">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="name"/>
+				<xs:element name="sex"/>
+				<xs:element name="class"/>
+			</xs:sequence>
+			<xs:attribute name="card-id" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="lend-info">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="lend" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="lend">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="lend-date" type="xs:date"/>
+				<xs:element ref="return"/>
+			</xs:sequence>
+			<xs:attribute name="card-id" type="xs:IDREF" use="required"/>
+			<xs:attribute name="book-id" type="xs:IDREFS" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="return">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:enumeration value="否"/>
+				<xs:enumeration value="是"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	
+</xs:schema>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

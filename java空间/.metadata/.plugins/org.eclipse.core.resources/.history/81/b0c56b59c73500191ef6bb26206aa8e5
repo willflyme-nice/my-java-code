@@ -1,0 +1,15 @@
+import java.io.*;
+public class FileDemo{
+	public static void main(String args[]) throws IOException{
+		File fi=new File("FileDemo.java");
+		System.out.print("file exist--"+fi.exists());
+		
+		/*FileInputStream fi=new FileInputStream("FileDemo.java");
+		BufferedInputStream bf=new BufferedInputStream(fi);
+		int i=bf.read();
+		System.out.print(i+" ");*/
+		
+		
+	}
+	
+}

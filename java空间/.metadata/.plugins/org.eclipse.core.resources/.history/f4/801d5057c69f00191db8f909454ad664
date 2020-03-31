@@ -1,0 +1,82 @@
+import java.awt.*;
+import javax.swing.*;
+
+
+
+public class MapDamo {
+	
+	//窗体中包含的组件
+	JFrame frame=new JFrame("输入省/直辖市查询相应的市县");
+	JTextField tf1,tf2,tf3;
+	JComboBox sex,province,area;
+	JButton button1,button2;
+	
+	public static void main(String arg[]) throws Exception{
+		MapDamo that=new MapDamo();
+		that.go();
+	}
+	public void go() throws Exception{
+		
+		//创建并布局
+		tf1=new JTextField(10);
+		tf2=new JTextField(15);
+		tf3=new JTextField(15);
+		button1=new JButton("保存");
+		button2=new JButton("重置");
+		sex=new JComboBox();
+		province=new JComboBox();
+		area=new JComboBox();
+		JLabel lb1=new JLabel("姓名");
+		JLabel lb2=new JLabel("性别");
+		JLabel lb3=new JLabel("省/直辖市");
+		JLabel lb4=new JLabel("市县");
+		JLabel lb5=new JLabel("详细地址:");
+		JLabel lb6=new JLabel("E-mail:");
+		
+		JPanel pane1=new JPanel(new FlowLayout(10,0,FlowLayout.LEFT));
+		JPanel pane2=new JPanel(new FlowLayout(10,10,FlowLayout.LEFT));
+		JPanel pane3=new JPanel();
+		JPanel pane4=new JPanel(new FlowLayout(10,10,FlowLayout.LEFT));
+		JPanel pane5=new JPanel(new FlowLayout(10,10,FlowLayout.LEFT));
+		JPanel pane6=new JPanel();
+		pane1.add(lb1);
+		pane1.add(tf1);
+		pane2.add(lb2);
+		pane2.add(sex);
+		pane3.add(province);
+		pane3.add(lb3);
+		pane3.add(area);
+		pane3.add(lb4);
+		pane4.add(lb5);
+		pane4.add(tf2);
+		pane5.add(lb6);
+		pane5.add(tf3);
+		pane6.add(button1);
+		pane6.add(button2);
+		
+		Container cp=frame.getContentPane();
+		cp.setLayout(new GridLayout(0,1));
+		cp.add(pane1);
+		cp.add(pane2);
+		cp.add(pane3);
+		cp.add(pane4);
+		cp.add(pane5);
+		cp.add(pane6);
+		
+		//Border border=BorderFactory.createEtchedBorder();
+		//Border border1=BorderFactory.createTitledBorder(border,"请输入名称");
+		
+		//Border border2=BorderFactory.createTitledBorder(border,"抽奖结果");
+		
+		
+		//显示窗口
+		frame.pack();
+		frame.setLocation(800,400);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//添加相应事件
+		
+	}
+	
+}

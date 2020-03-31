@@ -1,0 +1,91 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.*;
+import java.util.ArrayList;
+
+
+public class DynamicArray implements ActionListener{
+	//创建一个演示动态数组的类
+	JFrame frame;
+	Box box1,box2;
+	JPanel panel;
+	JScrollPane jsp;
+	JLabel lab;
+	JTextField tf; 
+	JList list;
+	JButton button1,button2;
+	
+	ArrayList alist=new ArrayList();
+	public static void main(String arg[]) throws Exception{
+		DynamicArray that=new DynamicArray();
+		that.go();
+	}
+	public void go() throws Exception{
+		frame=new JFrame("动态数组管理列表框数据集合");
+		lab=new JLabel("学生姓名");
+		tf=new JTextField(15);
+		list=new JList();
+		list.setVisibleRowCount(10);
+		button1=new JButton("添加学生");
+		button2=new JButton("删除学生");
+		box1=Box.createHorizontalBox();
+		box2=Box.createVerticalBox();
+		panel=new JPanel();
+		jsp=new JScrollPane(list,JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		panel.setLayout(new BoxLayout(panel,BoxLayout.Y_AXIS));
+		Container cp=frame.getContentPane();
+		box1.add(lab);
+		box1.add(tf);
+		box2.add(button1);
+		box2.add(Box.createVerticalStrut(3));
+		box2.add(button2);
+		panel.add(box1);
+		panel.add(jsp);
+		cp.add(panel,"Center");
+		cp.add(box2, "East");
+		
+		button1.addActionListener(this);
+		button2.addActionListener(this);
+		
+		
+		frame.pack();
+		//frame.setBounds(200,200,300,500);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==button1)
+		{
+			tf.requestFocusInWindow();
+			tf.selectAll();
+			String text=tf.getSelectedText();
+			alist.add(text);
+			this.replaceModel();
+		}
+		if(e.getSource()==button2)
+		{
+			Object value=list.getSelectedValue();
+			alist.remove(value);
+			replaceModel();
+		}
+		
+	}
+	
+	void replaceModel() {
+		list.setModel(new AbstractListModel(){
+			public int getSize() {
+				return alist.size();
+			}
+			public Object getElementAt(int index) {
+				return alist.get(index);
+			}
+			
+		});
+		
+	}
+	
+	
+}

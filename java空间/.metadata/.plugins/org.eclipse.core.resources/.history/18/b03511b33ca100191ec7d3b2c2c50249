@@ -1,0 +1,32 @@
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
+public class FormatDate {
+		static Date date=new Date();
+		static DateFormat format;
+		
+	public static void main(String[]arg) {
+		
+		//中国日期
+	    format=DateFormat.getDateInstance(DateFormat.FULL,Locale.CHINA);
+	    System.out.println("中国日期："+format.format(date));
+	    
+	    //美国日期
+	    format=DateFormat.getDateInstance(DateFormat.FULL,Locale.US);
+	    System.out.println("美国日期："+format.format(date));
+	    
+	    //中国日期
+	    format=DateFormat.getDateInstance(DateFormat.FULL,Locale.JAPAN);
+	    System.out.println("日本日期："+format.format(date));
+	    
+	    //美国日期
+	    format=DateFormat.getDateInstance(DateFormat.FULL,Locale.ENGLISH);
+	    System.out.println("英国日期："+format.format(date));
+	    
+	    //尔罗斯
+	     format=DateFormat.getDateInstance(DateFormat.FULL,Locale.CANADA);
+	    System.out.println("加拿大日期："+format.format(date));
+    }
+}
+	

@@ -1,0 +1,89 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+public class DrawingExemple implements ActionListener{
+	JFrame frame;
+	MyButton button;
+	MyPanel panel;
+	int tag=0;
+	
+	public static void main(String args[]) {
+		DrawingExemple  that=new DrawingExemple ();
+		that.go();
+	}
+	public void go() {
+		frame=new JFrame("Drawing Exemple");
+		button=new MyButton("Draw");
+		button.addActionListener(this);
+		frame.getContentPane().add(button,BorderLayout.SOUTH);
+		panel=new MyPanel();
+		frame.getContentPane().add(panel,BorderLayout.CENTER);
+		
+		
+		
+		frame.setBounds(400,300,360,200);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+	}
+	
+	public void actionPerfomed(ActionEvent e) {
+		if(tag==0) {
+			tag=1;
+			button.setText("Draw");
+		}
+		else {
+			tag=0;
+			button.setText("Clear");
+		}
+		panel.repaint();
+	}
+
+
+	class MyButton extends JButton{
+		MyButton(String s){
+			super(s);
+		}
+		protected void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.setColor(Color.red);
+			g.drawOval(4, 4, getWidth()-8,getHeight()-8);
+			}	
+	}
+	
+	class MyPanel extends JPanel{
+		protected void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			//int xpoints[]= {280,300,320,290,260};
+			//int ypoints[]= {120,120,130,150,130};
+			if(tag==0) {
+				g.setColor(Color.BLUE);
+				g.drawLine(40,25,30,50);
+				g.setColor(Color.green);
+				g.drawRect(100, 50, 100, 46);
+				g.setColor(Color.red);
+				g.drawRoundRect(73,32,56,37,10,16);
+				g.setColor(Color.yellow);
+				g.fillOval(180, 60, 60, 45);
+				
+				
+			}
+		}
+		
+	}
+	
+}	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

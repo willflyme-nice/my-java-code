@@ -1,0 +1,15 @@
+import java.io.*;
+public class FileDemo{
+	public static void main(String args[]) throws IOException{
+		
+		FileInputStream fi=new FileInputStream("FileDemo.java");
+		InputStreamReader re=new InputStreamReader(fi);
+		BufferedReader bf=new BufferedReader(re);
+		char ch;
+		while((ch=bf.readLine())!=null)
+		    System.out.print(ch+" ");
+		
+		
+	}
+	
+}

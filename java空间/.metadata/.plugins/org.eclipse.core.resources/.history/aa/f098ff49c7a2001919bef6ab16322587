@@ -1,0 +1,19 @@
+/**
+ * 
+ * 数字类演示
+ * 
+ * @author Administrator
+ *
+ */
+import java.text.DecimalFormat;
+
+public class NumTest {
+	public static void main(String arg[]) {
+		//创建一个数字格式类型
+		DecimalFormat df1=new DecimalFormat(",000 . 00");
+		double i=111111000.456;
+		String str=df1.format(i);
+		System.out.println(str);
+		
+	}
+}

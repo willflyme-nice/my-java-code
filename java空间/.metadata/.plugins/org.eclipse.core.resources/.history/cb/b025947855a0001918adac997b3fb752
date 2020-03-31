@@ -1,0 +1,23 @@
+
+public class StaticDemo{
+	private static int a;
+	private float b;
+	static {
+		a=91;
+		System.out.println(a);
+		b=2;
+		System.out.println(b);
+		StaticDemo sd=new StaticDemo();
+		sd.outprint();
+		
+	}
+	public static void main(String[] arg) {
+		
+		
+	}
+	public void outprint() {
+		
+		System.out.println("hahahahha");
+	}
+	
+}

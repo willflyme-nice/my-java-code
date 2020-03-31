@@ -1,0 +1,22 @@
+import java.io.PrintStream;
+import java.io.FileNotFoundException;
+
+public class RedirectStream() {
+	public static void main(String args[]) {
+		try{
+			PrintStream out=System.out; //保存原输出流
+		     PrintStream rizhi=new PrintStream("./日志.txt"); //创建一个指向特定文件的输出流
+		     System.setOut(rizhi);  // 完成重定向
+		     System.out.println("这是程序日志");
+		     System.setOut(out); // 重定向恢复
+		     System.out.println("please look to file named 'rizhi'");
+			
+		}catch(FileNotFoundException e){
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	
+}

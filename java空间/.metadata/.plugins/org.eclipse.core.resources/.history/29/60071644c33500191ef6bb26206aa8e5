@@ -1,0 +1,13 @@
+import java.io.*;
+public class FileDemo{
+	public static void main(String args[]) {
+		File file=new File("/软件学习/程序代码/Java工作空间/filetext/src/Usefile.java");
+		File newName=new File("FrameDemo.java");
+		file.renameTo(newName);
+		System.out.println(file.getAbsoluteFile());
+		
+		
+		
+	}
+	
+}

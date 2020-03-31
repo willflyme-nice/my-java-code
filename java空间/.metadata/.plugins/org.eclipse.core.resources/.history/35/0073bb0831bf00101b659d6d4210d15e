@@ -1,0 +1,16 @@
+import java.io.*;
+public class Usefile{
+	public static void main(String args[]) {
+		FileInputStream fe=new FileInputStream("abc");
+		
+		
+		System.out.println(fe.read());
+		fe.close();
+		
+		 
+		
+		
+		
+	}
+	
+}

@@ -1,0 +1,14 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class FontDemo{
+	
+	public static void main(String args[]) {
+		GraphicsEnvironment env=GraphicsEnvironment.getLocalGraphicsEnvironment();
+		String[] fontNames=env.getAvailableFontFamilyNames();
+		System.out.println("ø…”√◊÷ÃÂ£∫ ");
+		for(int i=0;i<fontNames.length;i++)
+			System.out.println(" "+fontNames[i]);
+	}
+}

@@ -1,0 +1,12 @@
+1572661684633	Rename field 'num'
+1572661841176	Change method 'putout'
+1572662741931	Rename type 'HelloPackate'
+1572662806257	Rename type 'Hello'
+1572662918335	Move compilation unit
+1572663009026	Move compilation unit
+1572663039475	Move compilation unit
+1572663060942	Move compilation unit
+1572663191865	Move compilation unit
+1572663894309	Extract superclass 'persons'
+1572664057088	Extract method 'action'
+1572664201029	Pull up 'walk()' to 'persons'

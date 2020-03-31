@@ -1,0 +1,33 @@
+import java.awt.*;
+import javax.swing.*;
+
+public class MyDraw{
+	
+	static public void main(String[]arg) {
+		JFrame frame=new JFrame(" ±÷”—› æ");
+		My_Panel panel=new My_Panel();
+		frame.getContentPane().setLayout(null);
+		frame.getContentPane().add(panel);
+		panel.setBounds(0,0,300,300);
+		
+		
+		frame.pack();
+		frame.setLocation(300, 200);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+}
+
+class My_Panel extends JPanel{
+	
+	public void paintComponent(Graphics g) {
+		super.paintComponents(g);
+		Font font=new Font("Œ¢»Ì—≈∫⁄",Font.PLAIN,15);
+		g.setFont(font);
+		g.drawString("√Î’Î ±÷”",120,250);
+		g.setColor(Color.BLUE);
+		g.drawOval(50, 50, 200, 200);
+		
+	}
+}

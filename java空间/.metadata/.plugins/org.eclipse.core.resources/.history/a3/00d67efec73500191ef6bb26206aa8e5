@@ -1,0 +1,16 @@
+import java.io.*;
+public class FileDemo{
+	public static void main(String args[]) throws IOException{
+		File fi=new File("FileDemo.java");
+		System.out.println("file exist--"+fi.exists());
+		System.out.println("file's absoluted"+fi.getAbsolutePath());
+		
+		FileInputStream fil=new FileInputStream("FileDemo.java");
+		BufferedInputStream bf=new BufferedInputStream(fil);
+		int i=bf.read();
+		System.out.print(i+" ");
+		
+		
+	}
+	
+}

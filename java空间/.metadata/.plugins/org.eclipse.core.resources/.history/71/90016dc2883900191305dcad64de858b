@@ -1,0 +1,54 @@
+import java.awt.*;
+import javax.swing.*;
+import java.awt.event.*;
+
+public class MyFrame extends JFrame implements ActionListener{
+	JLabel source,target;
+	JTextField stf,ttf;
+	JButton clear,copy,close;
+	MyFrame(String s){
+		super(s);
+		source=new JLabel("Source");
+		target=new JLabel("Target");
+		stf=new JTextField();
+		ttf=new JTextField();
+		JPanel panel=new JPanel(new GridLayout(2,1));
+		JPanel subpanel=new JPanel();
+		subpanel.add(source);
+		subpanel.add(stf);
+		panel.add(subpanel);   //子面板加入到主面板
+		
+		subpanel=new JPanel();
+		subpanel.add(target);
+		subpanel.add(ttf);
+		panel.add(subpanel);  //第二个字面板加入主面板
+		
+		clear=new JButton("Clear");
+		copy=new JButton("Copy");	
+		close=new JButton("Close");
+		clear.addActionListener(this);
+		copy.addActionListener(this);
+		close.addActionListener(this);
+		
+		subpanel=new JPanel();
+		subpanel.add(clear);
+		subpanel.add(copy);
+		subpanel.add(close);
+		
+		Container cp=this.getContentPane();
+		cp.add(panel, "Center");
+		cp.add(subpanel,"South");    //两个面板一起加入窗体中
+		
+		this.setSize(300,200);
+		this.setVisible(true);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	public static void main(String[]arg) {
+		new MyFrame("My Frame");
+	}
+	
+	public void actionPerformed(ActionEvent e) {
+		
+	}
+}

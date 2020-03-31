@@ -1,0 +1,44 @@
+import java.awt.*;
+import javax.swing.*;
+class MyWindow extends JFrame{
+	private JButton be,bw,bs,bn,b1,b2,b3,b4;
+	MyWindow(){
+		this.setTitle("Border Layout");
+		Container contentPane=getContentPane();
+		BorderLayout borLayout=new BorderLayout(5,5);
+		contentPane.setLayout(borLayout);
+		be=new JButton("east");
+		bw=new JButton("west");
+		bs=new JButton("south");
+		bn=new JButton("north");
+		b1=new JButton("center1");
+		b2=new JButton("center2");
+		b3=new JButton("center3");
+		b4=new JButton("center4");
+		JPanel panel=new JPanel();
+		panel.setLayout(new FlowLayout());
+		panel.add(be);
+		panel.add(bw);
+		panel.add(bc);
+		contentPane.add(be,BorderLayout.EAST);
+		contentPane.add(bw,BorderLayout.WEST);
+		contentPane.add(bs,BorderLayout.SOUTH);
+		contentPane.add(bn,BorderLayout.NORTH);
+		contentPane.add(panel,BorderLayout.CENTER);
+		
+			
+	}
+}
+	public class LayoutDemo{
+		public static void main(String args[]) {
+			MyWindow mywin=new MyWindow();
+			mywin.setVisible(true);
+			mywin.setSize(350,200);
+			mywin.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		}
+		
+	
+	
+	
+}
+

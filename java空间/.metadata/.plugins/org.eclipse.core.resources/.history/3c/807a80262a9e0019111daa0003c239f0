@@ -1,0 +1,27 @@
+import java.awt.*;
+import javax.swing.*;
+
+
+public class DynamicArray {
+	//创建一个演示动态数组的类
+	JFrame frame;
+	JPanel panel1,panel2;
+	JLabel lab;
+	JTextField tf; 
+	JTextArea ta;
+	JButton button1,button2;
+	public static void main(String arg[]) throws Exception{
+		DynamicArray that=new DynamicArray();
+		that.go();
+	}
+	public void go() throws Exception{
+		frame=new JFrame("动态数组管理列表框数据集合");
+		
+		frame.setBounds(300,200,300,200);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+	
+	
+}

@@ -1,0 +1,52 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+
+public class FontDemo{
+	JFrame frame;
+	MyJPanel panel;
+	JButton button;
+	
+	public static void main(String args[]) {
+		GraphicsEnvironment env=GraphicsEnvironment.getLocalGraphicsEnvironment();
+		String[] fontNames=env.getAvailableFontFamilyNames();
+		System.out.println("可用字体： ");
+		for(int i=0;i<fontNames.length;i++)
+			System.out.println(" "+fontNames[i]);
+		
+		FontDemo that=new FontDemo();that.go();
+		
+			
+	}
+	
+	public void go() {
+		
+		frame=new JFrame();
+		Container contentPane=frame.getContentPane();
+		panel=new MyJPanel();
+		contentPane.add(panel, "Center");
+		Font f1=new Font("黑体",Font.PLAIN,32);
+		panel.setFont(f1);
+		
+		frame.setBounds(400,300,300,200);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		
+		
+		
+		
+
+		
+	}
+	 
+	class MyPanel extends JPanel{
+		public void paintComponent(Graphics g) {
+			super.paintComponent(g);
+			g.drawString("这是黑体", 10, 10）;
+			
+		}
+	}
+	
+	
+}

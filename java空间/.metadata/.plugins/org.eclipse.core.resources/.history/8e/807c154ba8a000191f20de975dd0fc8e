@@ -1,0 +1,126 @@
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.Border;
+import java.util.*;
+import java.awt.event.*;;
+
+
+
+public class MapDamo {
+	
+	//窗体中包含的组件
+	JFrame frame=new JFrame("输入省/直辖市查询相应的市县");
+	JTextField tf1,tf2,tf3;
+	JComboBox sex,province,area;
+	JButton button1,button2;
+	Map<String,String[]> model;
+	
+	public static void main(String arg[]) throws Exception{
+		MapDamo that=new MapDamo();
+		that.go();
+	}
+	public void go() throws Exception{
+		
+		//创建并布局
+		tf1=new JTextField(10);
+		tf2=new JTextField(15);
+		tf3=new JTextField(15);
+		button1=new JButton("保存");
+		button2=new JButton("重置");
+		sex=new JComboBox();
+		province=new JComboBox();
+		area=new JComboBox();
+		JLabel lb1=new JLabel("姓名");
+		JLabel lb2=new JLabel("性别");
+		JLabel lb3=new JLabel("省/直辖市");
+		JLabel lb4=new JLabel("市县");
+		JLabel lb5=new JLabel("详细地址:");
+		JLabel lb6=new JLabel("E-mail:");
+		
+		JPanel pane1=new JPanel(new FlowLayout());
+		JPanel pane2=new JPanel(new FlowLayout());
+		JPanel pane3=new JPanel();
+		JPanel pane4=new JPanel(new FlowLayout());
+		JPanel pane5=new JPanel(new FlowLayout());
+		JPanel pane6=new JPanel();
+		Border border1=BorderFactory.createLoweredBevelBorder();
+		Border border=BorderFactory.createTitledBorder(border1,"居住地");
+		pane3.setBorder(border);		
+		pane1.add(lb1);
+		pane1.add(tf1);
+		pane2.add(lb2);
+		pane2.add(sex);
+		pane3.add(province);
+		pane3.add(lb3);
+		pane3.add(area);
+		pane3.add(lb4);
+		pane4.add(lb5);
+		pane4.add(tf2);
+		pane5.add(lb6);
+		pane5.add(tf3);
+		pane6.add(button1);
+		pane6.add(button2);
+		
+		Container cp=frame.getContentPane();
+		cp.setLayout(new GridLayout(0,1));
+		cp.add(pane1);
+		cp.add(pane2);
+		cp.add(pane3);
+		cp.add(pane4);
+		cp.add(pane5);
+		cp.add(pane6);
+		
+		//Border border=BorderFactory.createEtchedBorder();
+		//Border border1=BorderFactory.createTitledBorder(border,"请输入名称");
+		
+		//Border border2=BorderFactory.createTitledBorder(border,"抽奖结果");
+		
+		
+		//显示窗口
+		frame.pack();
+		frame.setLocation(800,400);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//创建集合，并保存数据
+		 model=new LinkedHashMap();
+		model.put("海南",new String[] {"三亚","海口","万宁","詹州"});
+		 model.put("黑龙江", new String[]{"哈尔滨","齐齐哈尔","牡丹江","大庆","伊春","双鸭山","鹤岗","鸡西","佳木斯","七台河","黑河","绥化","大兴安岭"});
+	        model.put("吉林", new String[]{"长春","延边","吉林","白山","白城","四平","松原","辽源","大安","通化"});
+	        model.put("辽宁", new String[]{"沈阳","大连","葫芦岛","旅顺","本溪","抚顺","铁岭","辽阳","营口","阜新","朝阳","锦州","丹东","鞍山"});
+	        model.put("内蒙古", new String[]{"呼和浩特","呼伦贝尔","锡林浩特","包头","赤峰","海拉尔","乌海","鄂尔多斯","通辽"});
+	        model.put("河北", new String[]{"石家庄","唐山","张家口","廊坊","邢台","邯郸","沧州","衡水","承德","保定","秦皇岛"});
+	        model.put("河南", new String[]{"郑州","开封","洛阳","平顶山","焦作","鹤壁","新乡","安阳","濮阳","许昌","漯河","三门峡","南阳","商丘","信阳","周口","驻马店"});
+	        model.put("山东", new String[]{"济南","青岛","淄博","威海","曲阜","临沂","烟台","枣庄","聊城","济宁","菏泽","泰安","日照","东营","德州","滨州","莱芜","潍坊"});
+	        model.put("山西", new String[]{"太原","阳泉","晋城","晋中","临汾","运城","长治","朔州","忻州","大同","吕梁"});
+	        model.put("江苏", new String[]{"南京","苏州","昆山","南通","太仓","吴县","徐州","宜兴","镇江","淮安","常熟","盐城","泰州","无锡","连云港","扬州","常州","宿迁"});
+	        model.put("安徽", new String[]{"合肥","巢湖","蚌埠","安庆","六安","滁州","马鞍山","阜阳","宣城","铜陵","淮北","芜湖","毫州","宿州","淮南","池州"});
+	        model.put("陕西", new String[]{"西安","韩城","安康","汉中","宝鸡","咸阳","榆林","渭南","商洛","铜川","延安"});
+	        
+	   //为 province添加事件 
+	   province.addItemListener(new ItemChange());     
+	        
+	   Set<String> set=model.keySet(); 
+	   Object[] str=set.toArray();
+	   province.setModel(new DefaultComboBoxModel(str));
+	}
+	
+	public class ItemChange implements ItemListener{
+		
+		public void itemStateChanged(ItemEvent e) {
+			Object selectedItem=province.getSelectedItem();
+			getCity(selectedItem);
+			
+		}
+	}
+	
+	//根据所选项更新市县集
+	void getCity(Object selectedItem) {
+		String[] str=model.get(selectedItem);
+		area.removeAllItems();
+		area.setModel(new DefaultComboBoxModel(str));
+	
+	}
+	
+	
+}

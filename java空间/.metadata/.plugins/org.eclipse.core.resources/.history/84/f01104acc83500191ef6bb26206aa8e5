@@ -1,0 +1,14 @@
+import java.io.*;
+public class FileDemo{
+	public static void main(String args[]) throws IOException{
+		
+		FileInputStream fil=new FileInputStream("FileDemo.java");
+		BufferedInputStream bf=new BufferedInputStream(fil);
+		int i;
+		while(i=bf.read()!=null)
+		    System.out.print(i+" ");
+		
+		
+	}
+	
+}

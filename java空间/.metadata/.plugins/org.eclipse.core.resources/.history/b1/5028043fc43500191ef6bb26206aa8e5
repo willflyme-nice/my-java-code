@@ -1,0 +1,15 @@
+import java.io.*;
+public class FileDemo{
+	public static void main(String args[]) {
+		FileInputStream fi=new FileInputStream("FileDemo.java");
+		BufferedInputStream bf=new BufferedInputStream(fi);
+		int i=100;
+		while(i>0) {
+			System.out.print(bf.read());
+		}
+		
+		
+		
+	}
+	
+}

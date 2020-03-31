@@ -1,0 +1,23 @@
+import java.io.*;
+public class FileDemo{
+	public static void main(String args[]) throws IOException{
+		
+		FileInputStream fi=new FileInputStream("FileDemo.java");
+		FileOutputStream fo=new FileOutputStream("ÎÒµÄ¸´ÖÆ.txt");
+		InputStreamReader re=new InputStreamReader(fi);
+		OutputStreamWriter wr=new OutputStreamWriter(fo);
+		BufferedReader bf=new BufferedReader(re);
+		BufferedWriter b=new BufferedWriter(wr);
+		String s;
+		while((s=bf.readLine())!=null) {
+		    System.out.println(s);
+		    b.write(s);
+		    b.newLine();
+		}
+		   
+		
+		
+		
+	}
+	
+}

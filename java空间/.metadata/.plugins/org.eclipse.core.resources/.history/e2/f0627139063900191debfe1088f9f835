@@ -1,0 +1,61 @@
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.event.*;
+import javax.swing.*;
+
+public class ListDemo implements ActionListener,ListSelectionListener{
+	JFrame frame=new JFrame("ListDemo");
+	JList<String> list;
+	DefaultListModel<String> listmodel;
+	JScrollPane jsp;
+	JPanel panel;
+	JButton button;
+	JTextField tf;
+	
+	public static void main(String args[]) throws Exception{
+		
+		ListDemo that=new ListDemo ();that.go();
+				
+	}
+	
+	public void go() throws Exception{
+		
+		listmodel=new DefaultListModel<String>();
+		listmodel.addElement("one");
+		listmodel.addElement("two");
+		listmodel.addElement("three");
+		listmodel.addElement("four");
+		list=new JList<String>(listmodel);
+		list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+		jsp=new JScrollPane(list,JScrollPane.
+				VERTICAL_SCROLLBAR_AS_NEEDED,JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+		tf=new JTextField(15);
+		button=new JButton("add new item");
+		
+		button.addActionListener(this);
+		list.addListSelectionListener(this);
+		
+		panel=new JPanel();
+		panel.add(tf);
+		panel.add(button);
+		Container content=frame.getContentPane();
+		content.add(jsp);
+		content.add(panel, "South");
+		
+		frame.pack();
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		}
+	
+	
+	public void actionPerformed(ActionEvent e) {
+		listmodel.addElement(tf.getText());
+	}
+	
+	public void valueChanged(ListSelectionEvent e) {
+		tf.setText(list.getSelectedValue());
+	}
+	
+		
+}

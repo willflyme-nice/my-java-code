@@ -1,0 +1,53 @@
+import java.lang.Thread;
+
+   
+public class ThreadTest{
+	
+	
+	public static void main(String[]ad) {
+		
+		Station a=new Station("1");
+		Station b=new Station("2");
+		Station c=new Station("3");
+		a.start();
+		b.start();
+		c.start();
+		
+		
+	}
+	
+
+	
+}
+
+
+ class Station extends Thread{
+	static int ticket=20;
+	static Object lock="aa";
+	Station(String name){
+		super(name);
+	}
+	public void run() {
+		while(ticket>0) {
+			if(ticket>0) {
+				synchronized(lock) {
+					ticket--; 
+					int i=20-ticket;
+			        System.out.println(this.getName()+"窗口售出第"+i+"张票");
+				}
+			   
+			    try {
+				   sleep(1000);
+			    }catch(InterruptedException e) {}
+			}
+			else {
+				 System.out.println("票售完了");
+			}
+			
+		}
+	}
+}	
+
+
+
+

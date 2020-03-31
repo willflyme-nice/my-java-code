@@ -1,0 +1,107 @@
+import java.lang.Thread;
+
+   
+public class ThreadTest{
+	
+	Stack st=new Stack();
+	Children child=new Children();
+	Thread child1=new Thread(child,"child1");
+	Thread child2=new Thread(child,"child2");
+	Thread child3=new Thread(child,"child3");
+	Parents parents=new Parents();
+	Thread father=new Thread(parents,"father");
+	Thread mother=new Thread(parents,"mother");
+	
+	public static void main(String[]ad) throws Exception{
+      
+		ThreadTest that=new ThreadTest();
+		that.go();
+	}
+	
+	
+	void go() {
+		father.start();
+		mother.start();
+		child1.start();
+		child2.start();
+		child3.start();
+	}
+	class Parents implements Runnable{
+		public void run() {
+			while(true) {
+				if(st.getNumber()==5)
+					st.wait();
+				st.push();
+				st.notify();
+				
+			}
+		}
+	}
+	
+	class Children implements Runnable {
+		public void run() throws Exception{
+			while(true) {
+				if(st.getNumber()==0)
+					st.wait();
+				st.pop();
+				st.notify();
+					
+				if(Thread.currentThread()==child1) {
+					Thread.sleep(1000);
+				}
+				else if(Thread.currentThread()==child2) {
+					Thread.sleep(2000);
+				}
+				else if (Thread.currentThread()==child3) {
+					Thread.sleep(1500);
+				}
+			}
+			
+		}
+	}
+
+	
+}
+
+
+
+
+class Stack{
+	int idx=0;
+	char ch[]=new char[5];
+	public void push() {
+		synchronized(this) {
+			ch[idx]='a';
+		    idx++;
+		}
+		
+	}
+	
+	public char pop() {
+		synchronized(this) {
+			idx--;
+		    return ch[idx];
+		}
+		
+	}
+	public int getNumber() {
+		return idx;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
